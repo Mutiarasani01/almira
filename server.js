@@ -71,7 +71,12 @@ async function handleApi(request, res, pathname) {
     }
     if (request.method === 'PATCH' && pathname.startsWith('/api/services/')) {
       const id = pathname.split('/')[3]; const payload = await body(request); const store = readStore(); const service = store.services.find((entry) => entry.id === id); if (!service) return json(res, 404, { error: 'Layanan tidak ditemukan.' });
-      if (payload.price !== undefined) service.price = Number(payload.price); if (payload.unit) service.unit = String(payload.unit); writeStore(store); return json(res, 200, { state: store });
+      if (payload.name !== undefined && String(payload.name).trim()) service.name = String(payload.name).trim(); if (payload.price !== undefined && Number.isFinite(Number(payload.price)) && Number(payload.price) >= 0) service.price = Number(payload.price); if (payload.unit) service.unit = String(payload.unit); writeStore(store); return json(res, 200, { state: store });
+    }
+    if (request.method === 'DELETE' && pathname.startsWith('/api/services/')) {
+      const id = pathname.split('/')[3]; const store = readStore(); const index = store.services.findIndex((entry) => entry.id === id);
+      if (index === -1) return json(res, 404, { error: 'Layanan tidak ditemukan.' });
+      store.services.splice(index, 1); writeStore(store); return json(res, 200, { state: store });
     }
     if (request.method === 'POST' && pathname === '/api/reset') { writeStore(defaultData); return json(res, 200, { state: readStore() }); }
     return json(res, 404, { error: 'Endpoint tidak ditemukan.' });
