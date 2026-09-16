@@ -1,0 +1,433 @@
+{
+  "services": [
+    {
+      "id": "copy-bw",
+      "name": "Fotocopy B/W",
+      "unit": "per lembar",
+      "price": 500,
+      "icon": "▤",
+      "impacts": [
+        {
+          "id": "paper-a4",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "id": "copy-color",
+      "name": "Fotocopy warna",
+      "unit": "per lembar",
+      "price": 1000,
+      "icon": "▧",
+      "impacts": [
+        {
+          "id": "paper-a4",
+          "qty": 1
+        },
+        {
+          "id": "ink-color",
+          "qty": 0.02
+        }
+      ]
+    },
+    {
+      "id": "print-bw",
+      "name": "Print B/W",
+      "unit": "per lembar",
+      "price": 1000,
+      "icon": "⌁",
+      "impacts": [
+        {
+          "id": "paper-a4",
+          "qty": 1
+        },
+        {
+          "id": "ink-black",
+          "qty": 0.01
+        }
+      ]
+    },
+    {
+      "id": "print-color",
+      "name": "Print warna",
+      "unit": "per lembar",
+      "price": 1500,
+      "icon": "▣",
+      "impacts": [
+        {
+          "id": "paper-a4",
+          "qty": 1
+        },
+        {
+          "id": "ink-color",
+          "qty": 0.03
+        }
+      ]
+    },
+    {
+      "id": "scan",
+      "name": "Scan dokumen",
+      "unit": "per file",
+      "price": 2000,
+      "icon": "⌕",
+      "impacts": []
+    },
+    {
+      "id": "binding",
+      "name": "Jilid spiral",
+      "unit": "per buku",
+      "price": 7000,
+      "icon": "▥",
+      "impacts": [
+        {
+          "id": "cover",
+          "qty": 1
+        },
+        {
+          "id": "plastic",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "inventory": [],
+  "transactions": [
+    {
+      "id": 12,
+      "receipt": "#0012",
+      "date": "2026-09-14",
+      "time": "14.32",
+      "total": 2000,
+      "payment": 2000,
+      "change": 0,
+      "items": [
+        {
+          "id": "copy-bw",
+          "name": "Fotocopy B/W",
+          "quantity": 4,
+          "price": 500
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "receipt": "#0011",
+      "date": "2026-09-14",
+      "time": "14.24",
+      "total": 11000,
+      "payment": 20000,
+      "change": 9000,
+      "items": [
+        {
+          "id": "copy-bw",
+          "name": "Fotocopy B/W",
+          "quantity": 2,
+          "price": 500
+        },
+        {
+          "id": "copy-color",
+          "name": "Fotocopy warna",
+          "quantity": 1,
+          "price": 1000
+        },
+        {
+          "id": "scan",
+          "name": "Scan dokumen",
+          "quantity": 1,
+          "price": 2000
+        },
+        {
+          "id": "binding",
+          "name": "Jilid spiral",
+          "quantity": 1,
+          "price": 7000
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "receipt": "#0010",
+      "date": "2026-09-14",
+      "time": "14.23",
+      "total": 6000,
+      "payment": 10000,
+      "change": 4000,
+      "items": [
+        {
+          "id": "copy-bw",
+          "name": "Fotocopy B/W",
+          "quantity": 2,
+          "price": 500
+        },
+        {
+          "id": "copy-color",
+          "name": "Fotocopy warna",
+          "quantity": 1,
+          "price": 1000
+        },
+        {
+          "id": "scan",
+          "name": "Scan dokumen",
+          "quantity": 2,
+          "price": 2000
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "receipt": "#0009",
+      "date": "2026-09-14",
+      "time": "14.23",
+      "total": 6000,
+      "payment": 10000,
+      "change": 4000,
+      "items": [
+        {
+          "id": "copy-bw",
+          "name": "Fotocopy B/W",
+          "quantity": 2,
+          "price": 500
+        },
+        {
+          "id": "copy-color",
+          "name": "Fotocopy warna",
+          "quantity": 1,
+          "price": 1000
+        },
+        {
+          "id": "scan",
+          "name": "Scan dokumen",
+          "quantity": 2,
+          "price": 2000
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "receipt": "#0008",
+      "date": "2026-09-14",
+      "time": "14.23",
+      "total": 6000,
+      "payment": 10000,
+      "change": 4000,
+      "items": [
+        {
+          "id": "copy-bw",
+          "name": "Fotocopy B/W",
+          "quantity": 2,
+          "price": 500
+        },
+        {
+          "id": "copy-color",
+          "name": "Fotocopy warna",
+          "quantity": 1,
+          "price": 1000
+        },
+        {
+          "id": "scan",
+          "name": "Scan dokumen",
+          "quantity": 2,
+          "price": 2000
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "receipt": "#0007",
+      "date": "2026-09-14",
+      "time": "14.23",
+      "total": 6000,
+      "payment": 10000,
+      "change": 4000,
+      "items": [
+        {
+          "id": "copy-bw",
+          "name": "Fotocopy B/W",
+          "quantity": 2,
+          "price": 500
+        },
+        {
+          "id": "copy-color",
+          "name": "Fotocopy warna",
+          "quantity": 1,
+          "price": 1000
+        },
+        {
+          "id": "scan",
+          "name": "Scan dokumen",
+          "quantity": 2,
+          "price": 2000
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "receipt": "#0006",
+      "date": "2026-09-14",
+      "time": "14.23",
+      "total": 6000,
+      "payment": 10000,
+      "change": 4000,
+      "items": [
+        {
+          "id": "copy-bw",
+          "name": "Fotocopy B/W",
+          "quantity": 2,
+          "price": 500
+        },
+        {
+          "id": "copy-color",
+          "name": "Fotocopy warna",
+          "quantity": 1,
+          "price": 1000
+        },
+        {
+          "id": "scan",
+          "name": "Scan dokumen",
+          "quantity": 2,
+          "price": 2000
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "receipt": "#0005",
+      "date": "2026-09-14",
+      "time": "14.23",
+      "total": 6000,
+      "payment": 10000,
+      "change": 4000,
+      "items": [
+        {
+          "id": "copy-bw",
+          "name": "Fotocopy B/W",
+          "quantity": 2,
+          "price": 500
+        },
+        {
+          "id": "copy-color",
+          "name": "Fotocopy warna",
+          "quantity": 1,
+          "price": 1000
+        },
+        {
+          "id": "scan",
+          "name": "Scan dokumen",
+          "quantity": 2,
+          "price": 2000
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "receipt": "#0004",
+      "date": "2026-09-14",
+      "time": "14.22",
+      "total": 6000,
+      "payment": 10000,
+      "change": 4000,
+      "items": [
+        {
+          "id": "copy-bw",
+          "name": "Fotocopy B/W",
+          "quantity": 2,
+          "price": 500
+        },
+        {
+          "id": "copy-color",
+          "name": "Fotocopy warna",
+          "quantity": 1,
+          "price": 1000
+        },
+        {
+          "id": "scan",
+          "name": "Scan dokumen",
+          "quantity": 2,
+          "price": 2000
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "receipt": "#0003",
+      "date": "2026-09-14",
+      "time": "14.18",
+      "total": 3000,
+      "payment": 5000,
+      "change": 2000,
+      "items": [
+        {
+          "id": "copy-color",
+          "name": "Fotocopy warna",
+          "quantity": 3,
+          "price": 1000
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "receipt": "#0002",
+      "date": "2026-09-14",
+      "time": "14.12",
+      "total": 11500,
+      "payment": 15000,
+      "change": 3500,
+      "items": [
+        {
+          "id": "copy-color",
+          "name": "Fotocopy warna",
+          "quantity": 1,
+          "price": 1000
+        },
+        {
+          "id": "scan",
+          "name": "Scan dokumen",
+          "quantity": 1,
+          "price": 2000
+        },
+        {
+          "id": "binding",
+          "name": "Jilid spiral",
+          "quantity": 1,
+          "price": 7000
+        },
+        {
+          "id": "print-color",
+          "name": "Print warna",
+          "quantity": 1,
+          "price": 1500
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "receipt": "#0001",
+      "date": "2026-09-14",
+      "time": "14.11",
+      "total": 2300,
+      "payment": 10000,
+      "change": 7700,
+      "items": [
+        {
+          "id": "copy-bw",
+          "name": "Fotocopy B/W",
+          "quantity": 1,
+          "price": 300
+        },
+        {
+          "id": "print-color",
+          "name": "Print warna",
+          "quantity": 1,
+          "price": 1500
+        },
+        {
+          "id": "print-bw",
+          "name": "Print B/W",
+          "quantity": 1,
+          "price": 500
+        }
+      ]
+    }
+  ],
+  "nextReceipt": 13
+}

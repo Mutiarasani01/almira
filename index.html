@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dashboard kasir dan stok internal Almira Fotocopy." />
+  <title>Almira Fotocopy — Kasir & Stok</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">A</span><div><strong>Almira</strong><small>Fotocopy</small></div></div>
+      <div class="owner-badge"><span class="online-dot"></span><div><b>Mode pemilik</b><small>Data tersimpan lokal</small></div></div>
+      <nav class="main-nav" aria-label="Menu utama"><button class="nav-item active" data-view="overview"><span>⌂</span> Ringkasan</button><button class="nav-item" data-view="cashier"><span>＋</span> Kasir</button><button class="nav-item" data-view="inventory"><span>▦</span> Stok bahan</button><button class="nav-item" data-view="services"><span>☷</span> Daftar harga</button></nav>
+      <div class="sidebar-note"><span>✦</span><p>Usaha kecil,<br /><b>rasa besar.</b></p></div>
+      <div class="sidebar-footer"><span>Almira OS</span><span>v1.0</span></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar"><div class="mobile-brand"><span class="brand-mark">A</span><b>Almira Fotocopy</b></div><div class="breadcrumb"><span>Dashboard</span><b>/</b><strong data-breadcrumb>Ringkasan</strong></div><div class="topbar-actions"><span class="today" data-today></span><button class="icon-button" data-reset title="Reset data demo">↻</button><button class="avatar" title="Profil pemilik">AS</button></div></header>
+
+      <section class="view active" id="overview-view" data-view-panel="overview">
+        <div class="page-heading"><div><p class="eyebrow">Selamat datang kembali, Almira</p><h1>Kerjaan jadi <em>lebih ringan.</em></h1><p class="heading-copy">Kelola transaksi, cek stok, dan pantau pemasukan dari satu tempat.</p></div><button class="primary-button" data-go-cashier>＋ Transaksi baru</button></div>
+        <div class="metric-grid"><article class="metric-card peach"><span class="metric-icon">Rp</span><div><p>Pemasukan hari ini</p><strong data-today-revenue>Rp 0</strong><small data-today-count>0 transaksi</small></div><span class="metric-decoration">↗</span></article><article class="metric-card cream"><span class="metric-icon">▣</span><div><p>Total transaksi</p><strong data-total-transactions>0</strong><small>tersimpan lokal</small></div><span class="metric-decoration">#</span></article><article class="metric-card lavender"><span class="metric-icon">▦</span><div><p>Stok perlu dicek</p><strong data-low-stock>0 item</strong><small>di bawah batas minimum</small></div><span class="metric-decoration">!</span></article></div>
+        <div class="dashboard-grid"><section class="panel recent-panel"><div class="panel-heading"><div><p class="eyebrow">Aktivitas terbaru</p><h2>Transaksi terakhir</h2></div><button class="text-button" data-view-target="cashier">Lihat kasir ↗</button></div><div class="transaction-list" data-recent-list><div class="empty-state">Belum ada transaksi. Yuk mulai dari kasir.</div></div></section><section class="panel stock-panel"><div class="panel-heading"><div><p class="eyebrow">Persediaan</p><h2>Stok menipis</h2></div><button class="text-button" data-view-target="inventory">Kelola ↗</button></div><div data-low-stock-list class="low-stock-list"><div class="empty-state">Semua stok masih aman ✦</div></div></section></div>
+      </section>
+
+      <section class="view" id="cashier-view" data-view-panel="cashier"><div class="page-heading compact"><div><p class="eyebrow">Kasir internal</p><h1>Buat <em>transaksi.</em></h1><p class="heading-copy">Pilih layanan, masukkan jumlah, lalu terima pembayaran.</p></div><div class="receipt-label">Nota otomatis <span>●</span></div></div><div class="cashier-layout"><section class="panel service-picker"><div class="panel-heading"><div><p class="eyebrow">01 / Pilih layanan</p><h2>Daftar layanan</h2></div><span class="count-label" data-service-count>0 layanan</span></div><div class="service-grid" data-service-grid></div></section><aside class="panel receipt-panel"><div class="receipt-top"><div><p class="eyebrow">Nota baru</p><h2>Almira Fotocopy</h2></div><span class="receipt-number" data-receipt-number>#0001</span></div><div class="receipt-items" data-receipt-items><div class="empty-state">Pilih layanan<br />untuk mulai menghitung.</div></div><div class="receipt-summary"><div><span>Subtotal</span><strong data-subtotal>Rp 0</strong></div><div class="total-row"><span>Total</span><strong data-total>Rp 0</strong></div></div><div class="payment-box"><label for="payment">Uang diterima</label><div class="payment-input"><span>Rp</span><input id="payment" data-payment type="number" min="0" placeholder="0" inputmode="numeric" /></div><div class="change-row"><span data-change-label>Kembalian</span><strong data-change>Rp 0</strong></div></div><button class="primary-button full" data-complete>Bayar & simpan transaksi <span>↗</span></button></aside></div></section>
+
+      <section class="view" id="inventory-view" data-view-panel="inventory"><div class="page-heading compact"><div><p class="eyebrow">Persediaan bahan</p><h1>Stok yang <em>terkendali.</em></h1><p class="heading-copy">Pantau kertas dan bahan operasional tanpa catatan tercecer.</p></div><button class="primary-button" data-add-stock>＋ Tambah bahan</button></div><div class="panel inventory-panel"><div class="inventory-toolbar"><div class="filter-tabs"><button class="filter-tab active" data-stock-filter="all">Semua</button><button class="filter-tab" data-stock-filter="low">Perlu restock</button></div><span class="count-label" data-inventory-count>0 item</span></div><div class="inventory-table-wrap"><table class="inventory-table"><thead><tr><th>Bahan</th><th>Stok saat ini</th><th>Batas minimum</th><th>Status</th><th>Aksi</th></tr></thead><tbody data-inventory-table></tbody></table></div></div></section>
+
+      <section class="view" id="services-view" data-view-panel="services"><div class="page-heading compact"><div><p class="eyebrow">Katalog kasir</p><h1>Harga yang <em>jelas.</em></h1><p class="heading-copy">Atur layanan yang muncul di halaman kasir.</p></div><button class="primary-button" data-add-service>＋ Tambah layanan</button></div><div class="service-admin-grid" data-service-admin></div></section>
+    </main>
+  </div>
+  <div class="toast" data-toast></div>
+  <div class="modal" data-modal hidden><div class="modal-card"><button class="close-button" data-close aria-label="Tutup">×</button><p class="eyebrow" data-modal-eyebrow>Tambah item</p><h2 data-modal-title>Tambah stok</h2><form data-modal-form></form></div></div>
+  <div class="modal receipt-modal" data-receipt-modal hidden><div class="receipt-paper"><button class="close-button" data-receipt-close aria-label="Tutup nota">×</button><div class="receipt-brand"><span class="brand-mark">A</span><div><strong>Almira Fotocopy</strong><small>Solusi cetak rumahan</small></div></div><div class="receipt-meta"><span data-print-number>#0001</span><span data-print-date>-</span></div><div class="receipt-dashed"></div><div data-print-items></div><div class="receipt-dashed"></div><div class="print-total"><span>Total</span><strong data-print-total>Rp 0</strong></div><div class="print-payment"><span>Uang diterima</span><b data-print-payment>Rp 0</b><span>Kembalian</span><b data-print-change>Rp 0</b></div><p class="receipt-thanks">Terima kasih sudah menggunakan jasa<br /><b>Almira Fotocopy</b> ♡</p><div class="receipt-actions"><button class="secondary-button" data-receipt-close>Tutup</button><button class="primary-button" data-print>⌁ Cetak nota</button></div></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
