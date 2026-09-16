@@ -3,3 +3,51 @@
 +@media(max-width:1050px){.sidebar{width:210px}.main-content{width:calc(100% - 210px);margin-left:210px}.game-layout{grid-template-columns:150px minmax(280px,400px) 150px}.service-admin-grid{grid-template-columns:repeat(2,1fr)}}
 +@media(max-width:800px){.sidebar{position:static;width:100%;height:auto;padding:16px 18px;border-right:0;border-bottom:1px solid #f0ddd5}.app-shell{display:block}.sidebar .owner-badge,.sidebar .main-nav,.sidebar .sidebar-note,.sidebar .sidebar-footer{display:none}.brand{display:none}.main-content{width:100%;margin:0}.topbar{height:65px;padding:0 18px}.mobile-brand{display:flex;font-size:13px}.breadcrumb{display:none}.today{display:none}.view{padding:31px 18px 50px}.page-heading{align-items:start;flex-direction:column;margin-bottom:28px}.page-heading .primary-button{width:100%}.metric-grid{grid-template-columns:1fr;gap:10px}.metric-card{min-height:108px}.dashboard-grid,.cashier-layout{grid-template-columns:1fr}.receipt-panel{position:static}.service-grid{grid-template-columns:repeat(2,1fr)}.service-admin-grid{grid-template-columns:1fr}.inventory-table-wrap{overflow-x:auto}.inventory-table{min-width:600px}.topbar-actions{gap:10px}}
 +@media(max-width:430px){.service-grid{grid-template-columns:1fr}.receipt-label{display:none}.heading-copy{line-height:1.5}.panel{border-radius:10px}.recent-panel,.stock-panel,.inventory-panel,.service-picker,.receipt-panel{padding:17px}}
+@media(max-width:800px){
+	html,body{width:100%;min-width:0;overflow-x:hidden}
+	.app-shell{display:block;width:100%;min-width:0}
+	.sidebar{position:static;width:100%;padding:14px 16px}
+	.main-content{width:100%;min-width:0;margin:0}
+	.topbar{width:100%;height:auto;min-height:60px;padding:12px 16px}
+	.mobile-brand{min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+	.topbar-actions{flex-shrink:0}
+	.view{width:100%;padding:28px 16px 42px;overflow:hidden}
+	.page-heading{gap:18px;margin-bottom:24px}
+	.page-heading h1{font-size:clamp(34px,10vw,48px);line-height:1.05}
+	.heading-copy{max-width:100%}
+	.page-heading .primary-button{width:100%;justify-content:center}
+	.panel{width:100%;min-width:0}
+	.inventory-toolbar{gap:12px;align-items:flex-start;flex-wrap:wrap}
+	.filter-tabs{max-width:100%;overflow-x:auto}
+	.inventory-table-wrap{overflow:visible}
+	.inventory-table,.inventory-table thead,.inventory-table tbody,.inventory-table tr,.inventory-table td{display:block;width:100%}
+	.inventory-table thead{display:none}
+	.inventory-table tr{padding:15px 0;border-bottom:1px solid var(--line)}
+	.inventory-table tr:last-child{border-bottom:0}
+	.inventory-table td{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:5px 0;border:0;text-align:right}
+	.inventory-table td:first-child{display:block;padding-top:0;text-align:left}
+	.inventory-table td:first-child small{display:block}
+	.inventory-table td::before{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.08em}
+	.inventory-table td:nth-child(2)::before{content:'Stok saat ini'}
+	.inventory-table td:nth-child(3)::before{content:'Batas minimum'}
+	.inventory-table td:nth-child(4)::before{content:'Status'}
+	.inventory-table td:nth-child(5)::before{content:'Aksi'}
+	.inventory-table td:nth-child(5){justify-content:flex-end;flex-wrap:wrap}
+	.table-action{white-space:nowrap}
+	.service-actions{flex-wrap:wrap}
+	.small-button{flex:1 1 90px;min-height:34px}
+	.modal{padding:16px}
+	.modal-card{width:100%;max-height:calc(100vh - 32px);overflow-y:auto;padding:24px 20px}
+	.receipt-modal{padding:16px}
+	.receipt-paper{max-height:calc(100vh - 32px);overflow-y:auto;padding:26px 20px 20px}
+}
+@media(max-width:430px){
+	.service-grid{grid-template-columns:1fr}
+	.metric-card{padding:18px}
+	.panel-heading{align-items:flex-start;gap:10px}
+	.panel-heading h2{font-size:20px}
+	.count-label{white-space:nowrap}
+	.receipt-label{display:none}
+	.recent-panel,.stock-panel,.inventory-panel,.service-picker,.receipt-panel{padding:17px}
+	.service-admin-grid{grid-template-columns:1fr}
+}
